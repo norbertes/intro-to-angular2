@@ -27,7 +27,9 @@ module.exports = {
     loaders: [
       { test: /\.ts$/, loader: 'ts-loader' },
     ],
-    noParse: [ path.join(__dirname, 'node_modules', 'angular2', 'bundles') ]
+    noParse: [
+      path.join(__dirname, 'node_modules', 'angular2', 'bundles')
+    ]
   },
 
   devServer: {

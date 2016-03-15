@@ -1,20 +1,11 @@
-//import "./lessons/01-hello-world/main";
-//import "./lessons/02-first-component/main";
-//import "./lessons/03-events-and-refs/main";
-//import "./lessons/04-events-in-depth/main";
-//import "./lessons/05-injecting-a-service/main";
-//import "./lessons/06-using-the-inject-decorator/main";
-//import "./lessons/07-ng-for/main";
-//import "./lessons/08-ng-model/main";
-//import "./lessons/09-adding-a-model/main";
-//import "./lessons/10-properties/main";
-//import "./lessons/11-using-input/main";
-//import "./lessons/12-ng-class-and-styling-components/main";
-//import "./lessons/13-style-encapsulation/main";
-//import "./lessons/14-using-pipes/main";
-//import "./lessons/15-pipes-and-immutability/main";
-//import "./lessons/16-refactoring-todo-updates/main";
-//import "./lessons/17-selecting-pipe-params/main";
-//import "./lessons/18-search-pipe/main";
-//import "./lessons/19-organization/main";
-import "./lessons/20-recap-and-whats-next/main";
+import { bootstrap } from 'angular2/platform/browser';
+import { Component } from 'angular2/core';
+
+@Component({
+  selector: 'app',
+  template: '<div>Hello world!</div>'
+})
+
+class App{}
+
+bootstrap(App);
