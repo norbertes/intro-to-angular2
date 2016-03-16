@@ -15,12 +15,10 @@ import { TodoModel } from './todo-model';
 export class TodoInput{
   todoModel:TodoModel = new TodoModel();
 
-  constructor(public todoService: TodoService) {
-
-  }
+  constructor(public todoService: TodoService) {}
 
   onSubmit() {
-    this.todoService.todos.push(this.todoModel);
+    this.todoService.addTodo(this.todoModel);
     this.todoModel = new TodoModel();
 
     console.log(this.todoService.todos);
