@@ -6,10 +6,10 @@ import { TodoModel } from './todo-model';
 @Component({
   selector: 'todo-input',
   template: `
-  <form (submit)="onSubmit()">
-    <input type="text" #myInput [(ngModel)]="todoModel.title" />
-  </form>
-  {{todoModel.title}}
+    <form (submit)="onSubmit()">
+      <input type="text" #myInput [(ngModel)]="todoModel.title" />
+    </form>
+    {{todoModel.title}}
   `,
 })
 export class TodoInput{
