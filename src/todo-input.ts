@@ -1,22 +1,28 @@
 import { Component } from 'angular2/core';
 
 import { TodoService } from './todo-service';
+import { TodoModel } from './todo-model';
 
 @Component({
   selector: 'todo-input',
   template: `
-    <input type="text" #myInput />
-    <div>Todo input!</div>
-    <button (click)="onClick($event, myInput.value)">Click me</button>
+  <form (submit)="onSubmit()">
+    <input type="text" #myInput [(ngModel)]="todoModel.title" />
+  </form>
+  {{todoModel.title}}
   `,
 })
 export class TodoInput{
+  todoModel:TodoModel = new TodoModel();
+
   constructor(public todoService: TodoService) {
 
   }
 
-  onClick($event, value) {
-    this.todoService.todos.push(value);
-    console.log('clicked', $event, this.todoService.todos);
+  onSubmit() {
+    this.todoService.todos.push(this.todoModel);
+    this.todoModel = new TodoModel();
+
+    console.log(this.todoService.todos);
   }
 };
