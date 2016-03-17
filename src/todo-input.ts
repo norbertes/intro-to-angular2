@@ -7,7 +7,7 @@ import { TodoModel } from './todo-model';
   selector: 'todo-input',
   template: `
     <form (submit)="onSubmit()">
-      <input type="text" #myInput [(ngModel)]="todoModel.title" />
+      Add todo: <input type="text" #myInput [(ngModel)]="todoModel.title" />
     </form>
     {{todoModel.title}}
   `,

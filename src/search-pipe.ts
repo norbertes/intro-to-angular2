@@ -7,9 +7,7 @@ import { Pipe } from 'angular2/core';
 // it speedup and changes from dirty checking into ref check
 export class SearchPipe {
 
-  transform(value) {
-    return value.filter( (item) => item.title.startsWith('s'));
-    // return value;
-    
+  transform(value, [term = '']) {
+    return value.filter( (item) => item.title.startsWith(term));
   }
 }
