@@ -21,6 +21,11 @@ import { SearchBox } from './search/components/search-box';
   </div>`,
 })
 
-class App{}
+class App{
+  ngOnInit() {
+    document.write('abc');
+    console.log('onInit')
+  }
+}
 
 bootstrap(App, [TodoService]);

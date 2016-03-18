@@ -1,4 +1,4 @@
- ///<reference path="./../node_modules/angular2/typings/browser.d.ts"/>
+ ///<reference path="./../typings/browser/ambient/es6-shim/index.d.ts"/>
 
 import 'angular2/bundles/angular2-polyfills';
 
